@@ -1,48 +1,43 @@
-import Card from 'react-bootstrap/Card';
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getListUser, updatePublish, unPublish } from '../../actions/userAction';
-import { formatDistance, subDays } from 'date-fns'
 import BorderExample from '../Spinner';
-import {motion} from 'framer-motion'
-import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import {motion} from 'framer-motion'
 import moment from 'moment';
 
-function AdminCards() {
-    const { getListUserResult, getListUserLoading, getListUserError, updatePublishResult, unPublishResult} = useSelector((state)=> state.UserReducer)
+function CardProfile() {
+
+  const getLs = localStorage.getItem("USER_ID")
+  const getProfile = JSON.parse(getLs)
+  const id = getProfile.id
+  const { getListUserResult, getListUserLoading, getListUserError} = useSelector((state)=> state.UserReducer)
     const dispatch = useDispatch();
-    
-    
+
     useEffect(()=>{
         dispatch(getListUser())
     }, [dispatch])
-    
-    useEffect(()=>{
-        if(updatePublish()){
-            dispatch(getListUser());
-        }
-    },[updatePublishResult, dispatch])
-
-    useEffect(()=>{
-        if(unPublish()){
-            dispatch(getListUser());
-        }
-    },[unPublishResult, dispatch])
 
   return (
-    
+    <>
+    <div className="container mt-5 mb-3 mx-auto text-center">
+    <h3 className='text-white'>{getProfile.username}'s Threads</h3>
+    </div>
+
     <motion.div className='container'
     initial={{ opacity: 0, scale: 0.5 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 1 }}
-    >
+    > 
+      
         {getListUserResult ? (
             getListUserResult.map((person)=>{
+              if(person.id === id){
                 return(
-                    <div className='container'>
+                <div className='container'>
                     {person.articles.map((x)=>{
                        let createdAt = moment(x.createdAt).fromNow(true); 
+                        if(x.publish === true){
                         return(
                           <div class="card w-75 card border-success mb-3 m-auto">
                           <div class="card-body">
@@ -58,36 +53,22 @@ function AdminCards() {
                             <p class="card-text">
                               {x.content}
                             </p>
-                            <hr />
+                            
+                            
                           </div>
-                          <p className='mx-3'>Edit Publish :</p>
-                          <Form.Check 
-                            className='check mx-3 mb-3'
-                            type="switch"
-                            id="custom-switch"
-                            checked={x.publish}
-                            onChange={()=>
-                            {if(x.publish===false){
-                            dispatch(updatePublish(x.id,person.id))
-                            }else{
-                            dispatch(unPublish(x.id,person.id))
-                            } } 
-                            }
-                          /> 
                         </div>
                         )
-                        
+                        }
                     }) 
                 }
                 </div>
-
                )
               
-            })
+              } })
           
         ) : getListUserLoading ? (
-          
-          <div className="container text-center justify-content-center">
+          //  <p>Loading....</p>
+          <div className="container text-center justify-content-center mt-5">
           <BorderExample/>
           </div>
         ): (
@@ -95,16 +76,9 @@ function AdminCards() {
         )}
         
     </motion.div>
+    
+    </>
   )
-
 }
 
-
-<div>
-</div>
-
-export default AdminCards;
-
-
-
-
+export default CardProfile

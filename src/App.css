@@ -262,7 +262,7 @@ select{
   position: fixed;
 }
 #ButtonPopUp {
-  margin-left: 550px;
+  margin-left: 570px;
 }
 #ButtonPopUpLoggedIn:hover{
   color: var(--white-base);
@@ -335,6 +335,7 @@ body {
   width: 150px;
   text-align: center;
   margin-left: 50px;
+  bottom: 50px;
   position: fixed;
   border-radius: 30px;
   font-family: 'Roboto', sans-serif;

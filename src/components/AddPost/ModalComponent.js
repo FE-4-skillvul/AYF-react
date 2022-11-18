@@ -66,7 +66,7 @@ const ModalComponent = ({ show, HideHandler }) => {
                 onChange={(e)=>setTitle(e.target.value)}
                 placeholder="Masukkan judul artikel"
                 required
-                maxLength={50}
+                maxLength={100}
               ></input>
               <select value={theme} onChange={(e)=>setTheme(e.target.value)} required >
                 <option required value="politics">Politics</option>
@@ -83,7 +83,7 @@ const ModalComponent = ({ show, HideHandler }) => {
                 value={content}
                 onChange={(e)=>setContent(e.target.value)}
                 placeholder="Masukkan artikel disini"
-                maxLength={280}
+                maxLength={350}
               ></textarea>
               <div className="text-end">
                 <button

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 function NavbarUser() {
   const dispatch = useDispatch()
-  
+  const getLs = localStorage.getItem("USER_ID")
 
   return (
     <div>
@@ -45,6 +45,7 @@ function NavbarUser() {
               >Logout
               </Link>
             </li>
+            {getLs ? (
             <li>
               <Link 
               to='/profile'
@@ -52,6 +53,15 @@ function NavbarUser() {
               >Profile
               </Link>
             </li>
+            ):(
+              <li>
+              <Link 
+              to='/profile'
+              className="dropdown-item disabled" 
+              >Profile
+              </Link>
+            </li>
+            )}
               </motion.div>
           </ul>
        
