@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { motion } from 'framer-motion'
 function About() {
   return (
@@ -8,6 +9,12 @@ function About() {
     transition={{ duration: 0.5 }}
     >
     <div className='container'>
+
+
+function About() {
+  return (
+    <div>
+
           <div className="card mb-3">
   <div className="row g-0">
     <div className="col-md-4">
@@ -25,7 +32,10 @@ function About() {
   </div>
 </div>
     </div>
+
     </motion.div>
+
+
   )
 }
 

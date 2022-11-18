@@ -3,12 +3,16 @@ import React from 'react'
 
 function Helps() {
   return (
+
     <motion.div
     initial={{ opacity: 0, scale: 0.5 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 1 }}
     >
     <div className='container'>
+
+    <div>
+
         <div className="row row-cols-1 row-cols-md-3 g-4">
   <div className="col">
     <div className="card h-100">
@@ -39,7 +43,9 @@ function Helps() {
   </div>
 </div>
     </div>
+
     </motion.div>
+
   )
 }
 

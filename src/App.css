@@ -400,9 +400,55 @@ body {
 }
 
 
+
 @media only screen and (min-width: 768px) {
   .select{
     display: none;
   }
   
 }
+
+.title-header{
+  text-align: center;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+.btn{
+  margin-bottom: 3vh;
+}
+.footer{
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  background-color: #034e0ace;
+  color: #fff;
+  margin-top: 60px;
+}
+.footer h4{
+  font-weight: 500;
+  color: #fff;
+}
+.navbar .container-fluid .navbar-brand{
+  color:white; 
+  font-weight: 400; 
+  font-size: x-large;
+}
+
+.sign-in{
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.sign-in:hover{
+  color: #65e67f;
+}
+
+.content{
+  height: 100vh;
+}
+
+
+
+
+
+

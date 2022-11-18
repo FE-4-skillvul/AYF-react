@@ -5,6 +5,7 @@ import Helps from '../components/Helps'
 import Footer from '../components/Footer'
 import { motion } from 'framer-motion'
 
+
 function LandingPage() {
   return (
     <div>
