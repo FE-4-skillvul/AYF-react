@@ -2,9 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import { AddUser, Login, ThreadsList } from './components';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
-
-import HomePageUser from './pages/HomePageUser';
-
 import AboutPageUser from './pages/AboutPageUser';
 import AboutPageAdmin from './pages/AboutPageAdmin';
 import HomePageAdmin from './pages/HomePageAdmin';
@@ -16,10 +13,8 @@ import MentalHealth from './pages/MentalHealth';
 import Politics from './pages/Politics';
 import Other from './pages/Other';
 import Profile from './pages/Profile';
-
 function App() {
   return (
-   <>
     <Router>
     <Routes>
      <Route path='/register' exact element={<AddUser/>}/>
@@ -39,22 +34,6 @@ function App() {
    </Routes>
  </Router>
     
-
-       <Routes>
-        <Route path='/register' exact element={<AddUser/>}/>
-        <Route path='/login' exact element={<Login/>}/>
-        <Route path="/" element={<LandingPage />}/>
-        <Route path="/homepageuser" element={<HomePageUser />}/>
-        <Route path="/homepageadmin" element={<HomePageAdmin />}/>
-        <Route path="/aboutpageuser" element={<AboutPageUser />}/>
-        <Route path="/aboutpageadmin" element={<AboutPageAdmin />}/>
-        <Route path="/aboutpagelanding" element={<AboutPageLanding />}/>
-
-
-      </Routes>
-    </Router>
-    </>
-
   );
 }
 

@@ -1,20 +1,14 @@
-
 import { motion } from 'framer-motion'
-
 import React from 'react'
 
 function Asean() {
   return (
-
     <motion.div
     initial={{ opacity: 0, scale: 0.5 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.5 }}
     >
     <div className='container'>
-
-    <div>
-
         <div className="row row-cols-1 row-cols-md-3 g-4">
   <div className="col">
     <div className="card h-100">
@@ -33,10 +27,7 @@ function Asean() {
 </div>
     </div>
     </div>
-
     </motion.div>
-
-
   )
 }
 
