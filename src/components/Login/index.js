@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addUser } from '../../actions/userAction'
 import { Link } from 'react-router-dom';
 import axios from "axios"
+import { motion } from 'framer-motion';
 
 
 
@@ -24,12 +25,12 @@ function Login() {
           if(cekData.role === "admin"){
             let parsedLS = JSON.stringify(cekData)
             localStorage.setItem('USER_ID', parsedLS)
-           alert("kamu admin")
+            window.location = "/admin";
                   
           } else{
             let parsedLS = JSON.stringify(cekData)
             localStorage.setItem('USER_ID', parsedLS)
-            alert("kamu User")
+            window.location = "/home";
              
           }
         }else{
@@ -40,7 +41,11 @@ function Login() {
 
     
   return (
-    <div>
+    <motion.div
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }}
+    >
     <div className="container mt-5 col-md-7">
     <div className="card mb-4">
         <div className="row g-0">
@@ -72,7 +77,7 @@ function Login() {
         </div>
       </div>
     </div>
-    </div>
+    </motion.div>
   )
 }
 

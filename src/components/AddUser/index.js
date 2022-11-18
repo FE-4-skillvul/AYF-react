@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addUser } from '../../actions/userAction'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 
 function AddUser() {
@@ -21,13 +22,18 @@ function AddUser() {
     useEffect(()=>{
         if(addUserResult){
             alert("Akun Berhasil Dibuat")
+            window.location='/login'
             setPassword('');
             setUsername('');
             setEmail('');
         }
     },[addUserResult])
   return (
-    <div>
+    <motion.div
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }}
+    >
     <div className="container mt-5 col-md-7">
     <div className="card mb-4">
         <div className="row g-0">
@@ -63,7 +69,7 @@ function AddUser() {
         </div>
       </div>
     </div>
-    </div>
+    </motion.div>
   )
 }
 
