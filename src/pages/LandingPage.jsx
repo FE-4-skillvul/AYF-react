@@ -3,6 +3,8 @@ import NavbarLanding from '../components/NavbarLanding'
 import Asean from '../components/Asean'
 import Helps from '../components/Helps'
 import Footer from '../components/Footer'
+import { motion } from 'framer-motion'
+
 
 function LandingPage() {
   return (
