@@ -42,7 +42,7 @@ function ParticlesBackground() {
                   area: 1080
                 },
                 limit: 0,
-                value: 500,
+                value: 50,
               },
               opacity: {
                 animation: {
