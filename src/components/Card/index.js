@@ -35,13 +35,13 @@ function Cards() {
     <>
     <div>
       <div className="select mb-3">
-      <Link to={'/politics'}>
+      <Link to={'politics'}>
      <Button className='' variant="success">Politics</Button>{' '}
      </Link>
-     <Link to={'/mental'}>
+     <Link to={'mental'}>
      <Button variant="success">Mental Health</Button>{' '}
      </Link>
-     <Link to={'/other'}>
+     <Link to={'other'}>
      <Button variant="success">Other</Button>{' '}
      </Link>
       
@@ -49,13 +49,13 @@ function Cards() {
     <Outlet/>
       <h3 id='topics'>Topics</h3>
       <hr/>
-     <Link to={'/politics'}>
+     <Link to={'politics'}>
      <Button className='mt-3' variant="success">Politics</Button>{' '}
      </Link>
-     <Link to={'/mental'}>
+     <Link to={'mental'}>
      <Button variant="success">Mental Health</Button>{' '}
      </Link>
-     <Link to={'/other'}>
+     <Link to={'other'}>
      <Button variant="success">Other</Button>{' '}
      </Link>
      
