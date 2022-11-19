@@ -9,7 +9,7 @@ import { addPost } from "../../actions/userAction";
 
 const notify = () =>
   toast.success("Threads Added.", {
-    duration: 4000,
+    duration: 7000,
     position: "bottom-left",
   });
 
@@ -32,6 +32,7 @@ const ModalComponent = ({ show, HideHandler }) => {
         useEffect(()=>{
           if(addPostResult){
               dispatch(HideHandler);
+              window.location='/home'
               setTitle("");
               setContent("")
           }
