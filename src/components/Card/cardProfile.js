@@ -37,7 +37,6 @@ function CardProfile() {
                 <div className='container'>
                     {person.articles.map((x)=>{
                        let createdAt = moment(x.createdAt).fromNow(true); 
-                        if(x.publish === true){
                         return(
                           <div class="card w-75 card border-success mb-3 m-auto">
                           <div class="card-body">
@@ -59,7 +58,7 @@ function CardProfile() {
                         </div>
                         )
                         }
-                    }) 
+                    ) 
                 }
                 </div>
                )
