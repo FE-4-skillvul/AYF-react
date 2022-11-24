@@ -7,6 +7,11 @@
   font-family: "Yantramanav", sans-serif;
 }
 
+.wrapper-main {
+  width: 97%;
+  margin: 0 auto;
+}
+
 .App {
   background: rgb(107, 248, 173);
   background: linear-gradient(
@@ -17,11 +22,10 @@
 }
 
 .hero-header {
-  border: 2px solid black;
   padding: 1em 6em 1em 6em;
   margin: 1em auto;
-  width: 97%;
-  height: 30vh;
+  width: 85%;
+  height: 36vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,14 +33,16 @@
   background-image: url(../public/img/cloudy.jpg);
   background-position: center;
   background-size: cover;
-  box-shadow: 10px 10px 25px -1px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 10px 10px 25px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 25px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .hero-pfp {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 2px solid black;
 }
@@ -44,11 +50,11 @@
 .profile-header {
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  gap: 2em;
 }
 
 .profile-body {
-  padding-top: 0.5em;
+  padding-top: 2em;
 }
 
 .hero-main {
@@ -64,9 +70,11 @@
 
 .card-content {
   margin-top: 6em;
-  box-shadow: 10px 10px 25px -1px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 10px 10px 25px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 25px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .card-wrapper {
@@ -76,9 +84,9 @@
   align-items: center;
   gap: 2em;
   margin: 1em auto;
-  width: 97%;
-  padding: 1em;
+  width: 85%;
   flex-wrap: wrap;
+  padding: 1em 0 1em 0;
 }
 
 .nv-main {
