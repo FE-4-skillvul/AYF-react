@@ -24,15 +24,40 @@ function ModalComponent() {
         <Modal.Header closeButton>
           <Modal.Title>Edit Profile</Modal.Title>
         </Modal.Header>
-        <Modal.Body>SETTING PROFILE</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
+        <Modal.Body>
+          <div>
+            <form className="form-edit-profile" onSubmit="#">
+              <div className="form-left">
+                <img
+                  className="user-profile"
+                  src="../img/user-profile.png"
+                  alt=""
+                />{" "}
+                <br /> <br />
+                <input type="file" name="" id="" />
+              </div>
+              <div className="form-right">
+                <label>Email</label>
+                <br />
+                <input type="email" name="" id="" />
+                <br />
+                <label>Username</label>
+                <br />
+                <input type="text" name="" id="" />
+                <br />
+                <label>Password</label>
+                <br />
+                <input type="password" name="" id="" />
+                <br />
+              </div>
+            </form>
+          </div>
+          <Modal.Footer>
+            <Button variant="primary" onClick={handleClose}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal.Body>
       </Modal>
     </>
   );
